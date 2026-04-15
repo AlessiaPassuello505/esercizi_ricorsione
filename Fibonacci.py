@@ -3,7 +3,8 @@ from time import time
 
 class Fibonacci:
     def __init__(self):
-        self.cache={0:0,1:1} #questo già lo so
+        self.cache={0: 0,1: 1} #questo già lo so
+
 
     @lru_cache(maxsize=None)
     def calcola_elemento_lru(self, n):
