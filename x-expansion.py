@@ -1,6 +1,5 @@
 import copy
 
-
 class XExpansion:
     def __init__(self):
         self.soluzioni = []
@@ -33,7 +32,7 @@ class XExpansion:
 
 
     def calcola(self, input):
-        self.soluzioni = []
+        self.soluzioni = []     # devo azzerare ogni volta
         self._ricorsione("", input)
 
     #parziale è la soluzione parziale
@@ -77,13 +76,8 @@ def x_expansion2(input):
     ricorsione("", input)
     return soluzioni
 
-
-
-
-
-
 if __name__ == '__main__':
-    sequenza = "01X"
+    sequenza = "01X0X"
     xexp = XExpansion()
 
     #metodo con soluzioni parziali rappresentate come stringhe

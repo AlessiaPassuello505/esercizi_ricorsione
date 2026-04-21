@@ -10,7 +10,7 @@ def anagrammi(parola):
 def ricorsione(parziale: list, rimanenti: str, soluzioni: list) -> list:
     #caso terminale
     if len(rimanenti) == 0:
-        soluzioni.append(copy.deepcopy(parziale))
+        soluzioni.append(copy.deepcopy(parziale))  # faccio una copia
     #caso ricorsivo
     else:
         for i in range(len(rimanenti)):
@@ -42,7 +42,7 @@ def ricorsione_str(parziale: str, rimanenti: str, soluzioni):
 def anagrammi_str2(parola):
     ricorsione_str2("", parola)
 
-@lru_cache(maxsize=None)
+@lru_cache(maxsize=None)   #la cache una volta che ha qualcosa in input che ha già visto, non lo stampa più
 def ricorsione_str2(parziale: str, rimanenti: str):
     #caso terminale
     if len(rimanenti) == 0:
@@ -55,7 +55,7 @@ def ricorsione_str2(parziale: str, rimanenti: str):
 
 
 if __name__ == '__main__':
-    # print(anagrammi('casa'))
+    #print(anagrammi('casa'))
     #
     # print(anagrammi_str('casaaaaa'))
 

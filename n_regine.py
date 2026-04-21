@@ -6,8 +6,6 @@ class Regina():
         self.riga = riga
         self.col = col
 
-
-
 class NRegine():
     def __init__(self):
         self.n_soluzioni = 0
@@ -16,7 +14,7 @@ class NRegine():
 
     #=======================================APPROCCIO 2=================================
     # Rappresentiamo soluzione come un vettore di N regine,
-    # ognuno rappresentante una regina come riga e colonn
+    # ognuno rappresentante una regina come riga e colonna
     def solve2(self, N):
         self.n_soluzioni = 0
         self.n_chiamate = 0
@@ -51,7 +49,7 @@ class NRegine():
                         # backtracking
                         parziale.pop()
 
-    #confrontiamo la solluzione potenziale con tutte quelle già trovate
+    #confrontiamo la soluzione potenziale con tutte quelle già trovate
     # se è diversa, restituiamo True, altrimenti False
     def _is_nuova_soluzione(self, soluzione_potenziale) -> bool:
         N = len(soluzione_potenziale)
